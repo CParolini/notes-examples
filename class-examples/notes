@@ -1,0 +1,140 @@
+10/31/2016
+
+Intro to JS
+- JS (Behavioral)
+- CSS (Presentational)
+- HTML (Structural)
+- It's like building a house
+  - CSS - fixtures, carpeting, paint
+  - JS - electrical, plumbing, HVAC
+  - HTML - framing, flooring, drywall
+  - Server - foundation
+
+Basic Variables
+Variables - the nouns of programming, they are "things" (numbers, strings, booleans (true/false), etc.), composed of variable names and values
+!- before a variable makes the variable return the opposite
+
+Concatination - adding strings together
+
+Console.log is a quick expression used to print content to the debugger.
+  - it is very useful to troubleshoot
+  - much easier way to see that your form is doing what you are expecting it to do.
+
+Alert- ok prompt
+Confirm- ok or cancel prompt
+Prompt- ask for some sort of information to be entered, will always be returned as a string
+
+Document.Write
+
+If-Then Statements
+- Super critical
+- Each statement is composed of an if, else-if, or else (keyword), a condition, and the resulting code in {}.
+
+== checks for the value, allows for coersion
+=== checks for the type, has to match exactly to return true
+
+Arrays
+- Zebra(0), Rhino(1), Giraffe(2), Owl(3) - (indexes)
+  - var zooAnimals = ["Zebra", "Rhino", "Giraffe", "Owl"]
+
+11-3-2016
+
+What we will do today:
+- Array Assignments
+- Concept of For-Loops
+  - Loops- I want you to do the same thing over again until I say stop. (repetitive tasks)
+- The art of psuedo coding
+  - if you can't explain the coding in words then you won't be able to do the actual coding
+  - the exercise of saying what is my code going to do and write it out in words
+- Building Rock Paper Scissors
+  - last 30 minutes will be building this basic rock paper scissors app
+
+What is JS?
+- Every time you see something on a website that happens without refreshing the page is JS.
+- Allows dev to create dynamic websites.
+- declaring a variable
+  - var
+  - var name (var x) - there are certain words that it cannot be (basically any word that is used in JS to perform soemthing)
+  - =
+  - value
+  - semicolon
+
+What is meant by console.log?
+- alert - var x = alert();
+- prompt - prompt();
+- confirm - confirm ();
+- document.write -
+
+What is an array?
+- collection of variables
+- can be string, numbers, booleans, etc.
+
+For Loops
+- for (var i = 0; i < vegetable.length; i++) { console.log("I love" + vegetable[i])};
+  - iterator - first statement in the loop will only run one time
+  - condition - second statement goes through the array until it's not true starting at 0
+  - implimentation - third statement adds one to the last item of the array
+
+Rock Paper Scissors
+
+
+11-5-2016
+
+Today we will cover
+- JS Functions
+- JS Objects
+- Building simple JS Applications
+
+Primitives
+- booleans
+- numbers
+- strings
+
+Arrays are a type of object not a primitive even though arrays can hold primitives.
+
+Function
+- something that performs a task. (simplest definition)
+- when changing, updating or fixing things you only have to change it one time. The ability to maintain your code.
+- allow you to standardize task so you don't have to rewrite code over and over again.
+- always label for easy understanding of what it is doing
+- decompose your code it to functions that have relatively small tasks and are easily readable.
+
+Objects
+- allow you to store any kind of data in a much simpler fashion
+- syntax
+  - var obj={};
+  - ways to call object
+    - me["name"]
+    - me.name = x
+- giant place to store data
+
+You want to separate the data of an application out from the build and makeup of it
+
+This
+- Inside a function, the value of this depends on how the function is called.
+- FUNCTION is a property of an object it's now a METHOD
+  - Math.random is a method
+  - This inside of a method refers to the object it is part of
+- if THIS is in a function it refers to the global window object
+- if THIS is in a method it refers to the object calling it
+
+11/08/2016
+
+Today's class:
+- DOM manipulation with JS
+- DOM manipulation with jQuery
+-
+
+jQuery $(Begins)
+- a helper library that is part of JS.
+- a way to have a universal syntax of keeping track of things on the DOM.
+-
+
+Creating a new div from Console.
+- to add newDiv to page you can use targetDiv.appendChild(newDiv)
+
+
+11/10/2016
+
+only the word function creates another scope
+function within a function is nested scope
