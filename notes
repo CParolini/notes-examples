@@ -138,3 +138,10 @@ Creating a new div from Console.
 
 only the word function creates another scope
 function within a function is nested scope
+
+11/12/2016
+
+- method is defined by an object
+  - always has a "." in front of the function name
+- Function always refers to the window
+  
