@@ -144,4 +144,9 @@ function within a function is nested scope
 - method is defined by an object
   - always has a "." in front of the function name
 - Function always refers to the window
-  
+
+11/17/2016
+!IMPORTANT! Int Questions:
+- if you want to make something async in JS the one way you can do that with native code is setTimeOut.
+  - will not be executed within the current function but when all the functions are complete that it's nested within.
+Hoisting

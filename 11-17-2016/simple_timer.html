@@ -1,0 +1,73 @@
+<!-- Simple Timer -->
+<!-- Students: Your work lies in the last script tag -->
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Simple Timer</title>
+
+  </head>
+
+  <body>
+
+    <div id="time-left"></div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+    <!-- Script -->
+    <script>
+
+      // Step 1:
+      // Use the following link inside the Audio function below:
+      // https://p.scdn.co/mp3-preview/ed5a443bc86176135ebca8a114f66f4d814d4c90'
+      var audio = new Audio("https://p.scdn.co/mp3-preview/ed5a443bc86176135ebca8a114f66f4d814d4c90");
+
+
+      // Step 2:
+      // Put our timeouts underneath this sentence.
+      setTimeout(fiveSeconds, 5000);
+      setTimeout(tenSeconds, 10000);
+      setTimeout(timeUp, 15000);
+
+      // Step 3:
+      // Fill in the blanks to these functions.
+      function fiveSeconds() {
+        alert("10 Seconds Left")
+        $('#time-left').html("10 Seconds Left");
+        // Once five seconds pass, send an alert and state the time remaining in the "time-left" div.
+
+      }
+
+
+      function tenSeconds() {
+        alert("5 Seconds Left")
+        $('#time-left').html("5 Seconds Left");
+
+        // Once ten seconds pass, send an alert and state the time remaining in the "time-left" div.
+
+      }
+
+
+      function timeUp() {
+        alert("Time's UP")
+        $('#time-left').html("Time's UP");
+
+        // Once Fifteen seconds pass, time is up!
+        // Send an alert and have the "time-left" div let the user know.
+
+
+        // The following line will play the audio file we linked to above.
+        audio.play();
+
+      }
+
+    </script>
+
+  </body>
+
+</html>
