@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Single AJAX</title>
+  </head>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <body>
+    <script type="text/javascript">
+
+      // constructing a queryURL variable we will use instead of the literal string
+      // inside of the ajax function
+      var title = "sweet+home+alabama";
+      var queryURL = "http://www.omdbapi.com/?t=" + title + "&y=&plot=short&r=json";
+
+      var title2 = "boondock+saints";
+      var queryURL2 = "http://www.omdbapi.com/?t=" + title2 + "&y=&plot=short&r=json";
+
+      $.ajax({ url: queryURL2, method: "GET" }).done(function(response) {
+        console.log(response);
+
+        console.log(response.Runtime);
+
+      });
+
+    </script>
+
+  </body>
+</html>
