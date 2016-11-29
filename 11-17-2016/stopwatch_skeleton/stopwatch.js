@@ -17,7 +17,7 @@ var myWatch;
 var stopwatch = {
 
     time: 0,
-    lap: 0,
+    lap: 1,
 
     reset: function() {
 
@@ -26,8 +26,8 @@ var stopwatch = {
 
         //  TODO: Change the "display" div to "00:00."
         $('#display').html("00:00");
-        $('#laps').html("");
-          },
+        $('#laps').empty();
+    },
 
     start: function() {
 
@@ -46,25 +46,29 @@ var stopwatch = {
 
         //  TODO: Get the current time, pass that into the stopwatch.timeConverter function,
         //        and save the result in a variable.
-        var currentTime = $('#display').text();
+        var timeNow = stopwatch.timeConverter(stopwatch.time);
 
         //  TODO: Add the current lap and time to the "laps" div.
-        stopwatch.lap++;
-        $('#laps').prepend("Lap" + " " + stopwatch.lap + " :" + currentTime + "<br>");
+
+        $('#laps').append('<p>Lap ' + stopwatch.lap + ' : ' + timeNow + '</p>');
+
         //  TODO: Increment lap by 1. Remember, we can't use "this" here.
+
+        stopwatch.lap++;
     },
     count: function() {
-
+        //  TODO: increment time by 1, remember we cant use "this" here.
         stopwatch.time++;
 
         console.log(stopwatch.time);
 
-        //  TODO: increment time by 1, remember we cant use "this" here.
-
         //  TODO: Get the current time, pass that into the stopwatch.timeConverter function,
         //        and save the result in a variable.
+
         var timeNow = stopwatch.timeConverter(stopwatch.time);
+
         //  TODO: Use the variable you just created to show the converted time in the "display" div.
+
         $('#display').html(timeNow);
     },
 

@@ -68,25 +68,27 @@ startDiv.innerHTML = numbers;
 function sorter(nums) {
 
   // Loop through the array of numbers...
-  for (var i = 0; i < nums.length; i++) {
+  // for (var i = 0; i < nums.length; i++) {
+  //
+  //   // ...and loop through them for each selected number.
+  //   for (var j = 0; j < nums.length; j++) {
+  //
+  //     // Check if the number to the left is greater than the number to the right.
+  //     if (nums[j - 1] > nums[j]) {
+  //
+  //       // Store the number on the left.
+  //       var tmp = nums[j - 1];
+  //
+  //       // Replace the number on the left with the number on the right.
+  //       nums[j - 1] = nums[j];
+  //
+  //       // Replace the number on the right with the stored number on the left.
+  //       nums[j] = tmp;
+  //     }
+  //   }
+  // }
 
-    // ...and loop through them for each selected number.
-    for (var j = 0; j < nums.length; j++) {
-
-      // Check if the number to the left is greater than the number to the right.
-      if (nums[j - 1] > nums[j]) {
-
-        // Store the number on the left.
-        var tmp = nums[j - 1];
-
-        // Replace the number on the left with the number on the right.
-        nums[j - 1] = nums[j];
-
-        // Replace the number on the right with the stored number on the left.
-        nums[j] = tmp;
-      }
-    }
-  }
+  nums.sort(function(a,b) {return a-b});
 
   // Store the sorted results in the result div.
   resultDiv.innerHTML = nums;
