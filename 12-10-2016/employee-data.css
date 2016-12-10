@@ -1,0 +1,30 @@
+.jumbotron {
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 66%;
+    border-radius: 5px;
+    height: 100px;
+    padding: 30px;
+}
+
+p {
+    background-color: blue;
+    margin-top: 0px;
+}
+
+.col-md-8 {
+    border: solid blue;
+    margin-top: 10px;
+}
+
+table {
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+form {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
