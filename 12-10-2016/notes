@@ -1,1 +1,0 @@
-data.ref().on("value") means that whenever the value of an object changes that is updated

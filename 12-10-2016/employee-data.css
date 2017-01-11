@@ -6,7 +6,6 @@
     width: 66%;
     border-radius: 5px;
     height: 100px;
-    padding: 30px;
 }
 
 p {
@@ -16,7 +15,8 @@ p {
 
 .col-md-8 {
     border: solid blue;
-    margin-top: 10px;
+    width: 66%;
+    margin: 10px auto;
 }
 
 table {
@@ -27,4 +27,18 @@ table {
 form {
     margin-top: -10px;
     margin-bottom: 10px;
+}
+
+.form-control {
+    width: 99%;
+    border-radius: 5px;
+    border: solid 1px #dfdfdf;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.btn {
+    margin-top: 10px;
 }

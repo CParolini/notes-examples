@@ -18,10 +18,12 @@
             <div class="col-md-8">
                 <p>Current Employee</p>
                 <table class="employee-data">
-                    <th class="name">Name</th>
+                    <th class="name">Employee Name</th>
                     <th class="role">Role</th>
                     <th class="date">Start Date</th>
+                    <th class="months">Months Worked</th>
                     <th class="rate">Rate</th>
+                    <th class="total">Total Billed</th>
                 </table>
                 <hr>
             </div>
@@ -32,19 +34,19 @@
                 <p>Add Employee</p>
                 <form role="form">
                     <div class="form-group">
-                        <label for="name-input">Name</label>
+                        <label for="name-input">Name</label><br>
                         <input class="form-control" id="name-input" type="text">
                     </div>
                     <div class="form-group">
-                        <label for="role-input">Role</label>
+                        <label for="role-input">Role</label><br>
                         <input class="form-control" id="role-input" type="text">
                     </div>
                     <div class="form-group">
-                        <label for="date-input">Sart Date:</label>
+                        <label for="date-input">Sart Date:</label><br>
                         <input class="form-control" id="date-input" type="date">
                     </div>
                     <div class="form-group">
-                        <label for="rate-input">Rate</label>
+                        <label for="rate-input">Rate</label><br>
                         <input class="form-control" id="rate-input" type="number">
                     </div>
                     <button class="btn btn-default" id="add-user" type="submit">Submit</button>
@@ -53,6 +55,8 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
         <script>
             // Initialize Firebase
@@ -79,7 +83,7 @@
                 // Grabbed values from text boxes
                 name = $("#name-input").val().trim();
                 role = $("#role-input").val().trim();
-                date = $("#date-input").val().trim();
+                date = moment($("#date-input").val().trim(), "DD/MM/YYYY").format("X");
                 rate = $("#rate-input").val().trim();
 
                 // Code for handling the push
@@ -96,28 +100,46 @@
 
             // Firebase watcher + initial loader HINT: .on("value")
             // database.ref().on("value", function(snapshot) {
-            database.ref().on("child_added", function(snapshot) {
+            database.ref().on("child_added", function(snapshot, prevChildKey) {
 
-                // Log everything that's coming out of snapshot
-                console.log(snapshot.val());
-                console.log(snapshot.val().name);
-                console.log(snapshot.val().role);
-                console.log(snapshot.val().date);
-                console.log(snapshot.val().rate);
+              var snap = childSnapShot.val();
+              var empName = snap.name;
+              var empRole = snap.role;
+              var empStart = snap.date;
+              var empRate = snap.rate;
 
-                // Change the HTML to reflect
-                // $(".name").append(snapshot.val().name);
-                // $(".role").append(snapshot.val().role);
-                // $(".date").append(snapshot.val().date);
-                // $(".rate").append(snapshot.val().rate);
+              var empStartPretty = moment.unix(empStart).format("MM/DD/YYYY");
+              var empMonths = moment().diff(moment.unix(empStart, "X"))
 
-                $('.employee-data tr:last').after(snapshot.val().name);
+                // // Log everything that's coming out of snapshot
+                // console.log(snapshot.val());
+                // console.log(snapshot.val().name);
+                // console.log(snapshot.val().role);
+                // console.log(snapshot.val().date);
+                // console.log(snapshot.val().rate);
+                //
+                // // Change the HTML to reflect
+                // $(".name").after(snapshot.val().name);
+                // $(".role").after(snapshot.val().role);
+                // $(".date").after(snapshot.val().date);
+                // $(".rate").after(snapshot.val().rate);
+
+                // $('.employee-data tr:last').after(snapshot.val().rate);
+                // $('.employee-data tr:last').after(snapshot.val().date);
+                // $('.employee-data tr:last').after(snapshot.val().role);
+                // $('.employee-data tr:last').after(snapshot.val().name);
 
 
                 // Handle the errors
             }, function(errorObject) {
                 console.log("Errors handled: " + errorObject.code);
             });
+
+            var randomDate = "02/23/1999";
+            var convertedDate = moment(randomDate, "MM/DD/YYYY");
+            convertedDate.format("MM/DD/YY")
+            convertedDate.toNow()
+            moment().diff(convertedDate, "months")
         </script>
 
 </body>
