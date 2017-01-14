@@ -1,0 +1,2 @@
+Anytime there is a "sync" on the end of fs.readFile or writeFile or whatever then it is blocking
+  - blocking means does not allow the code to continue running until that section is done.
