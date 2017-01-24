@@ -22,7 +22,7 @@ function Programmer(name, job, age, language) {
 
 this.printInfo = function() {
   console.log('Name: ' + this.name + '\nJob: ' + this.job + '\nAge: ' + this.age + '\nLanguage: ' + this.language);
-}
+}tu
 
 var info = new Programmer('Chris', 'Front-End', '29', 'JS');
 console.log('info.constructor is ' + info.constructor);

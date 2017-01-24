@@ -1,0 +1,15 @@
+MySQL
+- whenever we build a DB it will show up under Schemas.
+
+
+Inner Join
+- returns only the matching records from both tables
+
+Left Join
+- takes all the records from table on left and the ones that match from the table on right
+
+Right Join
+- opposite of Left Join
+
+Outer Join
+- takes data from both tables and displays them
