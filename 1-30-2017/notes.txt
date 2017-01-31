@@ -1,0 +1,9 @@
+Node Server
+
+Server is a machine that handles request that come in from a client and respond.
+
+Client is the browser.
+
+Transfer protocols are how client and servers communicate.
+
+Switch statement gives you different variables to check against
