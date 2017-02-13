@@ -1,0 +1,5 @@
+- ORM is a technique that lets you query and manipulate data from a database using an object-oriented paradigm.
+  - Why are the problems with ORMs?
+    - The specific example of OrmExample is that it was only console logging and not cb(calling back)
+  - What are the great things about ORMs?
+    - Makes it to where you don't have to right all the sequel queries in your js files.
