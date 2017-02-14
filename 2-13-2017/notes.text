@@ -1,0 +1,3 @@
+Model - represents our application core.
+View - displays our data
+Controller - controls all of the data of our page
