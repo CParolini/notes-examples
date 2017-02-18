@@ -1,3 +1,7 @@
 Model - represents our application core.
 View - displays our data
 Controller - controls all of the data of our page
+
+
+Takeaways:
+- Try to go through the Sequelize CLI deployment process
