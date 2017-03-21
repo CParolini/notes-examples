@@ -1,0 +1,7 @@
+Instructions:
+
+Using the code slacked out as a starting point, replace the contents of app.js such that it renders a simple Bootstrap layout.
+
+Note: Be sure to remember the "Gotcha" about class.
+
+Note: Be sure to remember to include Bootstrap CSS in index.html.
